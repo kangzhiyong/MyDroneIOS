@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7676ED22434C360008EB03C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7676ED12434C360008EB03C /* AppDelegate.m */; };
+		D7676ED52434C360008EB03C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7676ED42434C360008EB03C /* SceneDelegate.m */; };
+		D7676ED82434C360008EB03C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D7676ED72434C360008EB03C /* ViewController.mm */; };
+		D7676EDB2434C360008EB03C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7676ED92434C360008EB03C /* Main.storyboard */; };
+		D7676EDD2434C367008EB03C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7676EDC2434C367008EB03C /* Assets.xcassets */; };
+		D7676EE02434C367008EB03C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7676EDE2434C367008EB03C /* LaunchScreen.storyboard */; };
+		D7676EE32434C367008EB03C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7676EE22434C367008EB03C /* main.m */; };
+		D7676EED2434C367008EB03C /* MyDroneIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7676EEC2434C367008EB03C /* MyDroneIOSTests.m */; };
+		D7676EF82434C367008EB03C /* MyDroneIOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7676EF72434C367008EB03C /* MyDroneIOSUITests.m */; };
+		D7676F2B2434C426008EB03C /* message_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F072434C426008EB03C /* message_types.cpp */; };
+		D7676F2C2434C426008EB03C /* mavlink_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F0B2434C426008EB03C /* mavlink_utils.cpp */; };
+		D7676F2D2434C426008EB03C /* flyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F152434C426008EB03C /* flyer.cpp */; };
+		D7676F2E2434C426008EB03C /* my_drone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F172434C426008EB03C /* my_drone.cpp */; };
+		D7676F2F2434C426008EB03C /* mavlink_connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F182434C426008EB03C /* mavlink_connection.cpp */; };
+		D7676F302434C426008EB03C /* planning_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F1B2434C426008EB03C /* planning_utils.cpp */; };
+		D7676F312434C426008EB03C /* my_sampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F1C2434C426008EB03C /* my_sampler.cpp */; };
+		D7676F322434C426008EB03C /* k_d_tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F1D2434C426008EB03C /* k_d_tree.cpp */; };
+		D7676F332434C426008EB03C /* my_point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F202434C426008EB03C /* my_point.cpp */; };
+		D7676F342434C426008EB03C /* my_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F212434C426008EB03C /* my_data.cpp */; };
+		D7676F352434C426008EB03C /* my_graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F242434C426008EB03C /* my_graph.cpp */; };
+		D7676F362434C426008EB03C /* my_polygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F252434C426008EB03C /* my_polygon.cpp */; };
+		D7676F372434C426008EB03C /* colliders.csv in Resources */ = {isa = PBXBuildFile; fileRef = D7676F292434C426008EB03C /* colliders.csv */; };
+		D7676F382434C426008EB03C /* mavlink_udp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7676F2A2434C426008EB03C /* mavlink_udp.cpp */; };
+		D7676F3B2434C5D2008EB03C /* MyDroneIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = D7676F3A2434C5D2008EB03C /* MyDroneIOS.mm */; };
+		D7676F3E2435FC3B008EB03C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7676F3D2435FC3B008EB03C /* MapKit.framework */; };
+		D7676F402435FC45008EB03C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7676F3F2435FC45008EB03C /* CoreLocation.framework */; };
+		D7676F452435FD5D008EB03C /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7676F442435FD5D008EB03C /* MapAnnotation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7676EE92434C367008EB03C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7676EC52434C360008EB03C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7676ECC2434C360008EB03C;
+			remoteInfo = MyDroneIOS;
+		};
+		D7676EF42434C367008EB03C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7676EC52434C360008EB03C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7676ECC2434C360008EB03C;
+			remoteInfo = MyDroneIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D7676ECD2434C360008EB03C /* MyDroneIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDroneIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7676ED02434C360008EB03C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D7676ED12434C360008EB03C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7676ED32434C360008EB03C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		D7676ED42434C360008EB03C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		D7676ED62434C360008EB03C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D7676ED72434C360008EB03C /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		D7676EDA2434C360008EB03C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7676EDC2434C367008EB03C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7676EDF2434C367008EB03C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7676EE12434C367008EB03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7676EE22434C367008EB03C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7676EE82434C367008EB03C /* MyDroneIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDroneIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7676EEC2434C367008EB03C /* MyDroneIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDroneIOSTests.m; sourceTree = "<group>"; };
+		D7676EEE2434C367008EB03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7676EF32434C367008EB03C /* MyDroneIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDroneIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7676EF72434C367008EB03C /* MyDroneIOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDroneIOSUITests.m; sourceTree = "<group>"; };
+		D7676EF92434C367008EB03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7676F062434C426008EB03C /* mavlink_connection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mavlink_connection.hpp; sourceTree = "<group>"; };
+		D7676F072434C426008EB03C /* message_types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = message_types.cpp; sourceTree = "<group>"; };
+		D7676F082434C426008EB03C /* mavlink_udp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mavlink_udp.hpp; sourceTree = "<group>"; };
+		D7676F092434C426008EB03C /* message_ids.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message_ids.h; sourceTree = "<group>"; };
+		D7676F0A2434C426008EB03C /* flyer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = flyer.hpp; sourceTree = "<group>"; };
+		D7676F0B2434C426008EB03C /* mavlink_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mavlink_utils.cpp; sourceTree = "<group>"; };
+		D7676F0D2434C426008EB03C /* subgraph.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = subgraph.hxx; sourceTree = "<group>"; };
+		D7676F0E2434C426008EB03C /* graph.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = graph.hxx; sourceTree = "<group>"; };
+		D7676F102434C426008EB03C /* graph.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = graph.hxx; sourceTree = "<group>"; };
+		D7676F112434C426008EB03C /* adjacency.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = adjacency.hxx; sourceTree = "<group>"; };
+		D7676F122434C426008EB03C /* random-access-set.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "random-access-set.hxx"; sourceTree = "<group>"; };
+		D7676F132434C426008EB03C /* visitor.hxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = visitor.hxx; sourceTree = "<group>"; };
+		D7676F142434C426008EB03C /* my_drone.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = my_drone.hpp; sourceTree = "<group>"; };
+		D7676F152434C426008EB03C /* flyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flyer.cpp; sourceTree = "<group>"; };
+		D7676F162434C426008EB03C /* mavlink_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mavlink_utils.hpp; sourceTree = "<group>"; };
+		D7676F172434C426008EB03C /* my_drone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = my_drone.cpp; sourceTree = "<group>"; };
+		D7676F182434C426008EB03C /* mavlink_connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mavlink_connection.cpp; sourceTree = "<group>"; };
+		D7676F192434C426008EB03C /* message_types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = message_types.hpp; sourceTree = "<group>"; };
+		D7676F1B2434C426008EB03C /* planning_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = planning_utils.cpp; sourceTree = "<group>"; };
+		D7676F1C2434C426008EB03C /* my_sampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = my_sampler.cpp; sourceTree = "<group>"; };
+		D7676F1D2434C426008EB03C /* k_d_tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = k_d_tree.cpp; sourceTree = "<group>"; };
+		D7676F1E2434C426008EB03C /* my_graph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = my_graph.hpp; sourceTree = "<group>"; };
+		D7676F1F2434C426008EB03C /* my_polygon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = my_polygon.hpp; sourceTree = "<group>"; };
+		D7676F202434C426008EB03C /* my_point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = my_point.cpp; sourceTree = "<group>"; };
+		D7676F212434C426008EB03C /* my_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = my_data.cpp; sourceTree = "<group>"; };
+		D7676F222434C426008EB03C /* my_sampler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = my_sampler.hpp; sourceTree = "<group>"; };
+		D7676F232434C426008EB03C /* k_d_tree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = k_d_tree.hpp; sourceTree = "<group>"; };
+		D7676F242434C426008EB03C /* my_graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = my_graph.cpp; sourceTree = "<group>"; };
+		D7676F252434C426008EB03C /* my_polygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = my_polygon.cpp; sourceTree = "<group>"; };
+		D7676F262434C426008EB03C /* my_point.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = my_point.hpp; sourceTree = "<group>"; };
+		D7676F272434C426008EB03C /* my_data.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = my_data.hpp; sourceTree = "<group>"; };
+		D7676F282434C426008EB03C /* planning_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = planning_utils.hpp; sourceTree = "<group>"; };
+		D7676F292434C426008EB03C /* colliders.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colliders.csv; sourceTree = "<group>"; };
+		D7676F2A2434C426008EB03C /* mavlink_udp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mavlink_udp.cpp; sourceTree = "<group>"; };
+		D7676F392434C5D2008EB03C /* MyDroneIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDroneIOS.h; sourceTree = "<group>"; };
+		D7676F3A2434C5D2008EB03C /* MyDroneIOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyDroneIOS.mm; sourceTree = "<group>"; };
+		D7676F3D2435FC3B008EB03C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D7676F3F2435FC45008EB03C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D7676F432435FD5D008EB03C /* MapAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		D7676F442435FD5D008EB03C /* MapAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7676ECA2434C360008EB03C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7676F402435FC45008EB03C /* CoreLocation.framework in Frameworks */,
+				D7676F3E2435FC3B008EB03C /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7676EE52434C367008EB03C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7676EF02434C367008EB03C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7676EC42434C360008EB03C = {
+			isa = PBXGroup;
+			children = (
+				D7676ECF2434C360008EB03C /* MyDroneIOS */,
+				D7676EEB2434C367008EB03C /* MyDroneIOSTests */,
+				D7676EF62434C367008EB03C /* MyDroneIOSUITests */,
+				D7676ECE2434C360008EB03C /* Products */,
+				D7676F3C2435FC3B008EB03C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D7676ECE2434C360008EB03C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7676ECD2434C360008EB03C /* MyDroneIOS.app */,
+				D7676EE82434C367008EB03C /* MyDroneIOSTests.xctest */,
+				D7676EF32434C367008EB03C /* MyDroneIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7676ECF2434C360008EB03C /* MyDroneIOS */ = {
+			isa = PBXGroup;
+			children = (
+				D7676F432435FD5D008EB03C /* MapAnnotation.h */,
+				D7676F442435FD5D008EB03C /* MapAnnotation.m */,
+				D7676F052434C426008EB03C /* MyDrone */,
+				D7676F392434C5D2008EB03C /* MyDroneIOS.h */,
+				D7676F3A2434C5D2008EB03C /* MyDroneIOS.mm */,
+				D7676ED02434C360008EB03C /* AppDelegate.h */,
+				D7676ED12434C360008EB03C /* AppDelegate.m */,
+				D7676ED32434C360008EB03C /* SceneDelegate.h */,
+				D7676ED42434C360008EB03C /* SceneDelegate.m */,
+				D7676ED62434C360008EB03C /* ViewController.h */,
+				D7676ED72434C360008EB03C /* ViewController.mm */,
+				D7676ED92434C360008EB03C /* Main.storyboard */,
+				D7676EDC2434C367008EB03C /* Assets.xcassets */,
+				D7676EDE2434C367008EB03C /* LaunchScreen.storyboard */,
+				D7676EE12434C367008EB03C /* Info.plist */,
+				D7676EE22434C367008EB03C /* main.m */,
+			);
+			path = MyDroneIOS;
+			sourceTree = "<group>";
+		};
+		D7676EEB2434C367008EB03C /* MyDroneIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7676EEC2434C367008EB03C /* MyDroneIOSTests.m */,
+				D7676EEE2434C367008EB03C /* Info.plist */,
+			);
+			path = MyDroneIOSTests;
+			sourceTree = "<group>";
+		};
+		D7676EF62434C367008EB03C /* MyDroneIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D7676EF72434C367008EB03C /* MyDroneIOSUITests.m */,
+				D7676EF92434C367008EB03C /* Info.plist */,
+			);
+			path = MyDroneIOSUITests;
+			sourceTree = "<group>";
+		};
+		D7676F052434C426008EB03C /* MyDrone */ = {
+			isa = PBXGroup;
+			children = (
+				D7676F062434C426008EB03C /* mavlink_connection.hpp */,
+				D7676F072434C426008EB03C /* message_types.cpp */,
+				D7676F082434C426008EB03C /* mavlink_udp.hpp */,
+				D7676F092434C426008EB03C /* message_ids.h */,
+				D7676F0A2434C426008EB03C /* flyer.hpp */,
+				D7676F0B2434C426008EB03C /* mavlink_utils.cpp */,
+				D7676F0C2434C426008EB03C /* graph */,
+				D7676F142434C426008EB03C /* my_drone.hpp */,
+				D7676F152434C426008EB03C /* flyer.cpp */,
+				D7676F162434C426008EB03C /* mavlink_utils.hpp */,
+				D7676F172434C426008EB03C /* my_drone.cpp */,
+				D7676F182434C426008EB03C /* mavlink_connection.cpp */,
+				D7676F192434C426008EB03C /* message_types.hpp */,
+				D7676F1A2434C426008EB03C /* MissionPlanning */,
+				D7676F2A2434C426008EB03C /* mavlink_udp.cpp */,
+			);
+			path = MyDrone;
+			sourceTree = "<group>";
+		};
+		D7676F0C2434C426008EB03C /* graph */ = {
+			isa = PBXGroup;
+			children = (
+				D7676F0D2434C426008EB03C /* subgraph.hxx */,
+				D7676F0E2434C426008EB03C /* graph.hxx */,
+				D7676F0F2434C426008EB03C /* detail */,
+				D7676F112434C426008EB03C /* adjacency.hxx */,
+				D7676F122434C426008EB03C /* random-access-set.hxx */,
+				D7676F132434C426008EB03C /* visitor.hxx */,
+			);
+			path = graph;
+			sourceTree = "<group>";
+		};
+		D7676F0F2434C426008EB03C /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				D7676F102434C426008EB03C /* graph.hxx */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		D7676F1A2434C426008EB03C /* MissionPlanning */ = {
+			isa = PBXGroup;
+			children = (
+				D7676F1B2434C426008EB03C /* planning_utils.cpp */,
+				D7676F1C2434C426008EB03C /* my_sampler.cpp */,
+				D7676F1D2434C426008EB03C /* k_d_tree.cpp */,
+				D7676F1E2434C426008EB03C /* my_graph.hpp */,
+				D7676F1F2434C426008EB03C /* my_polygon.hpp */,
+				D7676F202434C426008EB03C /* my_point.cpp */,
+				D7676F212434C426008EB03C /* my_data.cpp */,
+				D7676F222434C426008EB03C /* my_sampler.hpp */,
+				D7676F232434C426008EB03C /* k_d_tree.hpp */,
+				D7676F242434C426008EB03C /* my_graph.cpp */,
+				D7676F252434C426008EB03C /* my_polygon.cpp */,
+				D7676F262434C426008EB03C /* my_point.hpp */,
+				D7676F272434C426008EB03C /* my_data.hpp */,
+				D7676F282434C426008EB03C /* planning_utils.hpp */,
+				D7676F292434C426008EB03C /* colliders.csv */,
+			);
+			path = MissionPlanning;
+			sourceTree = "<group>";
+		};
+		D7676F3C2435FC3B008EB03C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7676F3F2435FC45008EB03C /* CoreLocation.framework */,
+				D7676F3D2435FC3B008EB03C /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7676ECC2434C360008EB03C /* MyDroneIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7676EFC2434C367008EB03C /* Build configuration list for PBXNativeTarget "MyDroneIOS" */;
+			buildPhases = (
+				D7676EC92434C360008EB03C /* Sources */,
+				D7676ECA2434C360008EB03C /* Frameworks */,
+				D7676ECB2434C360008EB03C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyDroneIOS;
+			productName = MyDroneIOS;
+			productReference = D7676ECD2434C360008EB03C /* MyDroneIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7676EE72434C367008EB03C /* MyDroneIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7676EFF2434C367008EB03C /* Build configuration list for PBXNativeTarget "MyDroneIOSTests" */;
+			buildPhases = (
+				D7676EE42434C367008EB03C /* Sources */,
+				D7676EE52434C367008EB03C /* Frameworks */,
+				D7676EE62434C367008EB03C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7676EEA2434C367008EB03C /* PBXTargetDependency */,
+			);
+			name = MyDroneIOSTests;
+			productName = MyDroneIOSTests;
+			productReference = D7676EE82434C367008EB03C /* MyDroneIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D7676EF22434C367008EB03C /* MyDroneIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7676F022434C367008EB03C /* Build configuration list for PBXNativeTarget "MyDroneIOSUITests" */;
+			buildPhases = (
+				D7676EEF2434C367008EB03C /* Sources */,
+				D7676EF02434C367008EB03C /* Frameworks */,
+				D7676EF12434C367008EB03C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7676EF52434C367008EB03C /* PBXTargetDependency */,
+			);
+			name = MyDroneIOSUITests;
+			productName = MyDroneIOSUITests;
+			productReference = D7676EF32434C367008EB03C /* MyDroneIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7676EC52434C360008EB03C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = kangzhiyong;
+				TargetAttributes = {
+					D7676ECC2434C360008EB03C = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					D7676EE72434C367008EB03C = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = D7676ECC2434C360008EB03C;
+					};
+					D7676EF22434C367008EB03C = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = D7676ECC2434C360008EB03C;
+					};
+				};
+			};
+			buildConfigurationList = D7676EC82434C360008EB03C /* Build configuration list for PBXProject "MyDroneIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7676EC42434C360008EB03C;
+			productRefGroup = D7676ECE2434C360008EB03C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7676ECC2434C360008EB03C /* MyDroneIOS */,
+				D7676EE72434C367008EB03C /* MyDroneIOSTests */,
+				D7676EF22434C367008EB03C /* MyDroneIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7676ECB2434C360008EB03C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7676F372434C426008EB03C /* colliders.csv in Resources */,
+				D7676EE02434C367008EB03C /* LaunchScreen.storyboard in Resources */,
+				D7676EDD2434C367008EB03C /* Assets.xcassets in Resources */,
+				D7676EDB2434C360008EB03C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7676EE62434C367008EB03C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7676EF12434C367008EB03C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7676EC92434C360008EB03C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7676F382434C426008EB03C /* mavlink_udp.cpp in Sources */,
+				D7676F2B2434C426008EB03C /* message_types.cpp in Sources */,
+				D7676ED82434C360008EB03C /* ViewController.mm in Sources */,
+				D7676F332434C426008EB03C /* my_point.cpp in Sources */,
+				D7676F3B2434C5D2008EB03C /* MyDroneIOS.mm in Sources */,
+				D7676F312434C426008EB03C /* my_sampler.cpp in Sources */,
+				D7676F2E2434C426008EB03C /* my_drone.cpp in Sources */,
+				D7676F452435FD5D008EB03C /* MapAnnotation.m in Sources */,
+				D7676F2F2434C426008EB03C /* mavlink_connection.cpp in Sources */,
+				D7676ED22434C360008EB03C /* AppDelegate.m in Sources */,
+				D7676F2D2434C426008EB03C /* flyer.cpp in Sources */,
+				D7676F302434C426008EB03C /* planning_utils.cpp in Sources */,
+				D7676EE32434C367008EB03C /* main.m in Sources */,
+				D7676F2C2434C426008EB03C /* mavlink_utils.cpp in Sources */,
+				D7676F342434C426008EB03C /* my_data.cpp in Sources */,
+				D7676F362434C426008EB03C /* my_polygon.cpp in Sources */,
+				D7676F352434C426008EB03C /* my_graph.cpp in Sources */,
+				D7676F322434C426008EB03C /* k_d_tree.cpp in Sources */,
+				D7676ED52434C360008EB03C /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7676EE42434C367008EB03C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7676EED2434C367008EB03C /* MyDroneIOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7676EEF2434C367008EB03C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7676EF82434C367008EB03C /* MyDroneIOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7676EEA2434C367008EB03C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7676ECC2434C360008EB03C /* MyDroneIOS */;
+			targetProxy = D7676EE92434C367008EB03C /* PBXContainerItemProxy */;
+		};
+		D7676EF52434C367008EB03C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7676ECC2434C360008EB03C /* MyDroneIOS */;
+			targetProxy = D7676EF42434C367008EB03C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7676ED92434C360008EB03C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7676EDA2434C360008EB03C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7676EDE2434C367008EB03C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7676EDF2434C367008EB03C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7676EFA2434C367008EB03C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D7676EFB2434C367008EB03C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7676EFD2434C367008EB03C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGAKV9NUHN;
+				HEADER_SEARCH_PATHS = ./MyDroneIOS/lib;
+				INFOPLIST_FILE = MyDroneIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kzy.MyDroneIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7676EFE2434C367008EB03C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGAKV9NUHN;
+				HEADER_SEARCH_PATHS = ./MyDroneIOS/lib;
+				INFOPLIST_FILE = MyDroneIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kzy.MyDroneIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D7676F002434C367008EB03C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGAKV9NUHN;
+				INFOPLIST_FILE = MyDroneIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kzy.MyDroneIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDroneIOS.app/MyDroneIOS";
+			};
+			name = Debug;
+		};
+		D7676F012434C367008EB03C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGAKV9NUHN;
+				INFOPLIST_FILE = MyDroneIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kzy.MyDroneIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDroneIOS.app/MyDroneIOS";
+			};
+			name = Release;
+		};
+		D7676F032434C367008EB03C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGAKV9NUHN;
+				INFOPLIST_FILE = MyDroneIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kzy.MyDroneIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyDroneIOS;
+			};
+			name = Debug;
+		};
+		D7676F042434C367008EB03C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGAKV9NUHN;
+				INFOPLIST_FILE = MyDroneIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kzy.MyDroneIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyDroneIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7676EC82434C360008EB03C /* Build configuration list for PBXProject "MyDroneIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7676EFA2434C367008EB03C /* Debug */,
+				D7676EFB2434C367008EB03C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7676EFC2434C367008EB03C /* Build configuration list for PBXNativeTarget "MyDroneIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7676EFD2434C367008EB03C /* Debug */,
+				D7676EFE2434C367008EB03C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7676EFF2434C367008EB03C /* Build configuration list for PBXNativeTarget "MyDroneIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7676F002434C367008EB03C /* Debug */,
+				D7676F012434C367008EB03C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7676F022434C367008EB03C /* Build configuration list for PBXNativeTarget "MyDroneIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7676F032434C367008EB03C /* Debug */,
+				D7676F042434C367008EB03C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7676EC52434C360008EB03C /* Project object */;
+}
