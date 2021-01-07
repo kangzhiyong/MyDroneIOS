@@ -52,9 +52,11 @@ private:
     CallBackFunc m_pCallBackFunc;
     void *m_pViewController;
     string m_sAppPath;
+    bool m_bControlStatus{false};
 public:
     Flyer(MavlinkConnection *conn);
     void local_position_callback();
+    void global_position_callback();
     void velocity_callback();
     void state_callback();
     void calculate_box();
@@ -65,6 +67,7 @@ public:
     void disarming_transition();
     void manual_transition();
     void start(int t);
+    void stop();
     void plan_path();
     void create_graph(int k);
     bool can_connect(point3D p1, point3D p2);

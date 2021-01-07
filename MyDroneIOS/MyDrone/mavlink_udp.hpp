@@ -23,7 +23,7 @@
 #define MAX_UDP_PACKET_SIZE 65467 // UDP protocol max message size
 #define LOCAL_UDP_PORT  14550
 #define DEST_UDP_PORT 14555
-#define DEST_UDP_IP "192.168.4.1"
+#define DEST_UDP_IP "127.0.0.1"
 class mavudp
 {
     //a UDP mavlink socket

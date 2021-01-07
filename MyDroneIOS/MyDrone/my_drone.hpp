@@ -162,5 +162,6 @@ public:
     {
         return m_conn;
     }
+    void cmd_offboard_control(bool flag);
 };
 #endif /* MyDrone_hpp */

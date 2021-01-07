@@ -13,9 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MyDroneIOS : NSObject
     +(void) startMyDrone:(int) type;
-    +(void) stopMyDrone;
+    +(void) disarmMyDrone;
+    +(void) armMyDrone;
     +(void) registerCallBackFunction:(void *)data andCallBack:(CallBackFunc) func;
     +(void) setAppPath:(const char *)path;
+    +(void) setHomePosition:(double)lo andLa:(double) la andAlt:(double) alt;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -564,6 +564,9 @@ void MyDrone::set_home_position( double longitude, double latitude, double altit
     try {
         if (m_conn != nullptr) {
             m_conn->set_home_position(latitude, longitude, altitude);
+            _home_longitude = longitude;
+            _home_latitude = latitude;
+            _home_altitude = altitude;
         }
     } catch (...) {
         perror("set_home_position failed: ");
@@ -589,5 +592,12 @@ void MyDrone::stop()
     // Stops the connection to the drone
     if (m_conn != nullptr) {
         m_conn->stop();
+    }
+}
+
+void MyDrone::cmd_offboard_control(bool flag)
+{
+    if (m_conn != nullptr) {
+        m_conn->cmd_offboard_control(flag);
     }
 }

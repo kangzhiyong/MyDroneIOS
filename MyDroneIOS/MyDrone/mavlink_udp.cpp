@@ -46,7 +46,6 @@ mavudp::mavudp(std::string destAddr, bool input, bool broadcast, int source_syst
         close();
         return;
     }
-    printf("succe\r\n");
 
     int flags = fcntl(_socket, F_GETFD);
     flags |= FD_CLOEXEC;
@@ -66,6 +65,7 @@ mavudp::mavudp(std::string destAddr, bool input, bool broadcast, int source_syst
 void mavudp::close()
 {
     ::close(_socket);
+    _socket = -1;
 }
 
 void mavudp::fillAddr(const std::string &address, unsigned short port, sockaddr_in &addr)
@@ -96,8 +96,7 @@ int mavudp::recv(void *buffer, int bufferLen)
             return -1;
         }
     }
-//    destination_addr = inet_ntoa(clntAddr.sin_addr);
-//    destination_port = ntohs(clntAddr.sin_port);
+
     return (int)rtn;
 }
 

@@ -92,13 +92,19 @@ Flyer::Flyer(MavlinkConnection *conn): MyDrone(conn)
     register_callback(LOCAL_POSITION, ((void (MyDrone::*)())&Flyer::local_position_callback));
     register_callback(LOCAL_VELOCITY, ((void (MyDrone::*)())&Flyer::velocity_callback));
     register_callback(STATE, ((void (MyDrone::*)())&Flyer::state_callback));
+    register_callback(GLOBAL_POSITION, ((void (MyDrone::*)())&Flyer::global_position_callback));
+}
+
+void Flyer::global_position_callback()
+{
+    point3D p = global_position();
+    handleInformation(p[0], p[1], p[2]);
 }
 
 void Flyer::local_position_callback()
 {
-    cout << "local_position-> x: " << local_position()[0] << " y: " << local_position()[1] << " z: " << local_position()[2] << endl;
     point3D p = local_to_global(local_position(), global_home());
-    handleInformation(-p[0], p[1], p[2]);
+    handleInformation(p[0], p[1], p[2]);
     if (flight_state == TAKEOFF)
     {
         if (-1.0 * local_position()[2] > 0.95 * target_position[2])
@@ -181,7 +187,7 @@ void Flyer::state_callback()
 void Flyer::calculate_box()
 {
     flight_state = PLANNING;
-    cout << "Setting Home\r\n" << endl;
+    cout << "calculate_box\r\n" << endl;
     point4D cp({local_position()[0], local_position()[1], -local_position()[2], 0});
     point4D p1({2.0, 0.0, 2.0, 0}), p2({2.0, 2.0, 2.0, 0}), p3({0.0, 2.0, 2.0, 0}), p4({0.0, 0.0, 2.0, 0});
     all_waypoints.push(cp + p1);
@@ -194,8 +200,13 @@ void Flyer::arming_transition()
 {
     cout << "arming transition\r\n" << endl;
     flight_state = ARMING;
+    if (!m_bControlStatus) {
+        printf("Enable offboard mode\n");
+        cmd_offboard_control(true);
+        m_bControlStatus = true;
+    }
     arm();
-    take_control();
+//    take_control();
 }
 
 void Flyer::takeoff_transition()
@@ -217,7 +228,7 @@ void Flyer::waypoint_transition()
     target_position.print();
     cmd_position(target_position[0], target_position[1], target_position[2], target_position[3]);
     point3D p = local_to_global(point3D({target_position[0], target_position[1], target_position[2]}), global_home());
-    handleInformation(-p[0], p[1], p[2]);
+    handleInformation(p[0], p[1], p[2]);
 }
 
 void Flyer::landing_transition()
@@ -231,15 +242,20 @@ void Flyer::disarming_transition()
 {
     cout << "disarm transition" << endl;
     flight_state = DISARMING;
+    if (m_bControlStatus) {
+        printf("Disable offboard mode\n");
+        cmd_offboard_control(false);
+        m_bControlStatus = false;
+    }
     disarm();
-    release_control();
+//    release_control();
 }
 
 void Flyer::manual_transition()
 {
     cout << "manual transition" << endl;
     flight_state = MANUAL;
-    stop();
+//    stop();
     in_mission = false;
 }
 
@@ -263,7 +279,7 @@ void Flyer::plan_path()
 //    point3D lStart = global_to_local(gHome, gHome);
 //    point3D lGoal = global_to_local(gGoal, gHome);
     point3D lStart = local_position();
-    point3D lGoal = lStart + 3000;
+    point3D lGoal = lStart + 3;
     lStart.print();
     lGoal.print();
     size_t vStart = find_closed_vertice(lStart);
@@ -286,12 +302,16 @@ void Flyer::plan_path()
     
 void Flyer::start(int t)
 {
-    m_iFlyType = t;
     cout << "starting connection" << endl;
+    m_iFlyType = t;
     MyDrone::start();
-    arming_transition();
 }
 
+void Flyer::stop()
+{
+    cout << "stop connection" << endl;
+    MyDrone::stop();
+}
 bool Flyer::can_connect(point3D p1, point3D p2)
 {
     return m_mSampler->can_connect(p1, p2);
